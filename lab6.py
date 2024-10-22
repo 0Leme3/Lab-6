@@ -11,5 +11,5 @@ def encode(toEncode):
 
 
 if __name__ == '__main__':
-    encoded_string = encode("00009962")
-
+    encoded_string = encode("01234567")
+    decoded_string = decode("98765432")
