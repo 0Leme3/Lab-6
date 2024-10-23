@@ -8,13 +8,21 @@ def encode(encode):
             encoded += str(int(i) - 7)
     return encoded
 
+def decode(encoded):
 
+    decoded = ""
+    for i in encoded:
+        if int(i) > 2:
+            decoded += str(int(i) - 3)
+        if 0 <= int(i) <= 2:
+            decoded += str(int(i) + 7)
+    return decoded
 
 def main():
     option = None
     encoded = None
     while True:
-        print("-------------\n1. Encode\n2. Decode\n3. Quit\n")
+        print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
         option = input("Please enter an option: ")
         if option == "1":
             encoded  = encode(input("Please enter your password to encode: "))
