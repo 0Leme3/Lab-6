@@ -1,7 +1,7 @@
 #Diego Mendez
-def encode(toEncode):
+def encode(encode):
     encoded = ""
-    for i in toEncode:
+    for i in encode:
         if int(i)<=6:
             encoded += str(int(i) + 3)
         elif int(i)>6:
@@ -10,6 +10,21 @@ def encode(toEncode):
 
 
 
+def main():
+    option = None
+    encoded = None
+    while True:
+        print("-------------\n1. Encode\n2. Decode\n3. Quit\n")
+        option = input("Please enter an option: ")
+        if option == "1":
+            encoded  = encode(input("Please enter your password to encode: "))
+            print("Your password has been encoded and stored!\n")
+        elif option == "2":
+            print(f'The encoded password is {encoded}, and the original password is {decode(encoded)}\n')
+        elif option == "3":
+            break
+
 if __name__ == '__main__':
-    encoded_string = encode("01234567")
-    decoded_string = decode("98765432")
+    main()
+
+
